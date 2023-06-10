@@ -2,12 +2,16 @@
 pragma solidity 0.8.18;
 
 contract VendaBonus {
-    
-    
-    uint256 public constant FATOR_BONUS = 10;
+        
+    string public nomeVendedor;
+    uint256 public fatorBonus = 10;
 
-    function calcular(uint256 valorVenda) public pure returns (uint256) {
-        return (valorVenda * (FATOR_BONUS / 100)) + valorVenda;
+    constructor(string memory nomeVendendo) {
+        nomeVendedor = nomeVendendo;        
+    }
+
+    function calcular(uint256 valorVenda) public view returns (uint256) {
+        return (valorVenda * (fatorBonus / 100)) + valorVenda;
     }
 
 }
