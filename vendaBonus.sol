@@ -14,3 +14,4 @@ contract VendaBonus {
         return (valorVenda * fatorBonus / 100) + valorVenda;
     }
 }
+//0xC592e3f031B40567C0C7e743EC28Ab0aFe04cBac
